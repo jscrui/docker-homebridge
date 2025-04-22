@@ -77,7 +77,8 @@ RUN case "$(uname -m)" in \
 COPY rootfs /
 
 EXPOSE 8581/tcp
-VOLUME /homebridge
+# REMOVE or comment this line if it exists: (avoid Railway ban)
+#VOLUME /homebridge
 WORKDIR /homebridge
 
 # Copy the initial config.json to a temporary path
