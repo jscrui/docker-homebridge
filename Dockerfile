@@ -80,4 +80,13 @@ EXPOSE 8581/tcp
 VOLUME /homebridge
 WORKDIR /homebridge
 
-ENTRYPOINT [ "/init" ]
+# Copy the initial config.json to a temporary path
+COPY defaults/config.json /defaults/config.json
+
+# Copy the entrypoint script
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+
+# Replace the default config.json with the one in the container
+ENTRYPOINT ["/entrypoint.sh"]
+

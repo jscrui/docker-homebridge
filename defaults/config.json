@@ -1,0 +1,22 @@
+{
+    "bridge": {
+      "name": "Homebridge",
+      "username": "0E:33:AE:CE:3D:CE",
+      "port": 51826,
+      "pin": "031-45-154"
+    },
+    "accessories": [],
+    "platforms": [
+      {
+        "platform": "TuyaWebPlatform",
+        "name": "TuyaWebPlatform",
+        "options": {
+          "username": "juandesndr@gmail.com",
+          "password": "tohJiq-1gorxo-jythyb",
+          "countryCode": "54",
+          "platform": "tuya"
+        }
+      }
+    ]
+  }
+  
